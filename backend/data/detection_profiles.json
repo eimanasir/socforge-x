@@ -1,0 +1,22 @@
+[
+  {
+    "id": "basic",
+    "name": "Basic SOC",
+    "rules": {
+      "failed_login_threshold": 12,
+      "detect_encoded_powershell": true,
+      "encoded_switches": ["-enc"],
+      "lsass_tools": ["procdump.exe"]
+    }
+  },
+  {
+    "id": "advanced",
+    "name": "Advanced SOC",
+    "rules": {
+      "failed_login_threshold": 5,
+      "detect_encoded_powershell": true,
+      "encoded_switches": ["-enc", "-EncodedCommand"],
+      "lsass_tools": ["procdump.exe", "dumpert.exe"]
+    }
+  }
+]
